@@ -1,0 +1,34 @@
+I have attached three files:
+1. `few_shot_examples.csv` - Contains gold-standard examples of Kreitler's Meaning Values extraction, referent matching, and 7-aspect classifications.
+2. `test_sentences.csv` - Contains the new raw sentences to process.
+3. 'Meaning variables description  and examples complete for chap 1AA (2)' - General explanation of the method (doesnt include refLevel: the level of the referent, how close is it to the meaning value , and ss: sensory sensation, what sense was used if there was one used)
+TASK:
+1. Study the formatting and classification logic in `few_shot_examples.csv`.
+2. Restrict all aspect predictions to the valid category values shown in the example file.
+3. Process every row in `test_sentences.csv`.
+
+OUTPUT REQUIREMENT:
+Output ONLY a single valid JSON array formatted as follows:
+
+[
+  {
+    "Original_ID": 
+    "sentence": "...",
+    "results": [
+      {
+        "meaning_value": "...",
+        "referent": "...",
+        "classification": {
+          "dim": "...",
+          "tr": "...",
+          "fr": "...",
+          "sr": "...",
+          "fe": "...",
+          "refLevel": "...",
+          "ss": "..."
+        }
+      }
+    ]
+  }
+]
+the answers should be in hebrew
